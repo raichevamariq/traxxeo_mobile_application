@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src * 'unsafe-eval' 'unsafe-inline'; connect-src *; img-src *; style-src * 'unsafe-inline' ; media-src *;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/metro.css">
+    <link rel="stylesheet" type="text/css" href="css/fontello-embedded.css">
+
+    <title>Hello World</title>
+    <script type="text/javascript" src="cordova.js"></script>
+
+</head>
+<body style="background:#344d75;;position: fixed;width: 100%;height: 100%;overflow: hidden;">
+<div id="top_page"></div>
+<div class="card" style="height:80%;margin:5px">
+<div style="height:30%;padding:100px"><img width="200px" height="200px" src="img/settings.png" /></div>
+
+    <div style="height:30%;padding:100px">
+        <div class="vehicle_name">SELECT LANGUAGE</div>
+        <div>
+            <select>
+        <option>FR</option>
+        <option>NL</option>
+        <option>EN</option>
+    </select></div>
+    </div>
+   <!-- <div>
+        <input type="checkbox" id="vehicle_checkbox" value="vehicle"> <label for="vehicle_checkbox">Vehicle</label>
+        <input type="checkbox" id="object_checkbox" value="object"> <label for="object_checkbox">Object</label>
+        <input type="checkbox" id="person_checkbox" value="person"> <label for="person_checkbox">Person</label>
+    </div>-->
+    </div>
+<div id="btn-bar"  style="margin-bottom:0px; position: fixed; bottom: 0;width:100%;height:12%;background-color:#000000"></div>
+
+</body>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+
+
+    window.onload = function(){
+              /*  var userId = storage.getItem("userId");
+                var person = storage.userId.person;
+                var object = storage.userId.object;
+                var vehicle = storage.userId.vehicle;
+                var filter = {"vehicle":vevhicle,
+                              "object":object,
+                              "person":person};
+                $("#vehicle_checkbox").change(function(){
+                    if ($(this).checked){
+                    filter.vehicle = 1;
+                    }
+                    else {filter.vehicle = 0;}
+                    storage.setItem(storage.getItem(userId),JSON.stringify(filter));
+                });
+                $("#object_checkbox").change(function(){
+                    if ($(this).checked){
+                    filter.object = 1;
+                    }
+                    else {filter.object = 0;}
+                    storage.setItem(storage.getItem(userId),JSON.stringify(filter));
+                });
+                  $("#person_checkbox").change(function(){
+                    if ($(this).checked){
+                    filter.person = 1;
+                    }
+                    else {filter.person = 0;}
+                    storage.setItem(storage.getItem(userId),JSON.stringify(filter));
+                });
+                */
+                $("#top_page").load("template.html");
+                $("#btn-bar").load("button_bar.html");
+                $("#btn-map").hide();
+                $("#btn-details").hide();
+
+    };
+
+</script>
+</html>

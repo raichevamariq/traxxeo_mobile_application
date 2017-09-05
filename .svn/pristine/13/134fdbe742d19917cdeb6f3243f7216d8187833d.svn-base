@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "Mframe"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "Mframe"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/ionic-plugin-keyboard/src/windows/KeyboardProxy.js",
+            "id": "ionic-plugin-keyboard.KeyboardProxy",
+            "pluginId": "ionic-plugin-keyboard",
+            "clobbers": [
+                "cordova.plugins.Keyboard"
+            ],
+            "runs": true
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.1",
+        "ionic-plugin-keyboard": "2.2.1"
+    }
+}

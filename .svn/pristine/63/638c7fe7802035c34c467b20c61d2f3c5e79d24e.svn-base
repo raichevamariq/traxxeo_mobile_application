@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/jAlert.css">
+</head>
+<body style="background-color:#000000">
+<div  style="background-color:black;color:#FFFFFF">
+
+
+    <div id="btn-list" class="col-xs-3" style="text-align:center"><div  style="text-align:center;margin-top:10px"><img  width ="30px" height ="30px" src="img/menu_item_list.png" /></div><div  class="button_bar" style="text-align:center;margin-top:7px">List</div></div>
+    <div class="col-xs-3" id="btn-details" style="text-align:center"><div  style="text-align:center;margin-top:10px"><img width ="30" height ="30" src ="img/menu_item_details1.png" /></div><div class="button_bar" style="text-align:center;margin-top:7px">Details</div></div>
+    <div class="col-xs-3" id="btn-map" style="text-align:center"><div  style="text-align:center;margin-top:10px"><img  width ="30px" height ="30px" src  ="img/menu_item_map.png" /></div> <div class="button_bar" style="text-align:center;margin-top:7px">Map</div></div>
+    <div class="col-xs-3"  id="btn-settings" style="text-align:center"><div style="text-align:center;margin-top:10px"><img  width ="30px" height ="30px" src ="img/menu_item_settings.png" /></div> <div style="text-align:center;margin-top:7px"  class="button_bar" >Settings</div></div>
+</div>
+
+
+
+</body>
+<script type="text/javascript" src="js/jAlert.js"></script>
+<script>
+    var section = storage.selectedSection;
+    $("#btn-"+section).addClass("section");
+
+     $("#btn-details").on("click",function(){
+                                            if( storage.getItem("event_id")=="")
+                                            {
+                                             $.jAlert({
+                                               'title': 'No item selected',
+                                               'content': 'Pleas select an item from the list',
+                                               'theme': 'blue',
+                                               'size': 'md',
+                                               'showAnimation': 'fadeInUp',
+                                               'hideAnimation': 'fadeOutDown'
+                                             });
+                                            }
+                                            else {
+                                                storage.setItem("selectedSection","details");
+                                                window.location = "detail_view.html";
+                                            }
+                        				});
+
+     $("#btn-list").on("click",function(){
+                                             storage.setItem("selectedSection","list");
+
+
+                                            window.location = "vehicle_list.html";
+                   });
+
+        $("#btn-settings").on("click",function(){
+                                            storage.setItem("selectedSection","settings");
+                                            window.location = "settings.html";
+                   });
+
+
+                        				$("#btn-map").on("click",function(){
+
+                                            if( storage.getItem("event_id")=="")
+                                            {
+                                             $.jAlert({
+                                               'title': 'No item selected',
+                                               'content': 'Pleas select an item from the list',
+                                               'theme': 'blue',
+                                               'size': 'md',
+                                               'showAnimation': 'fadeInUp',
+                                               'hideAnimation': 'fadeOutDown'
+                                             });
+                                            }
+                                            else{
+
+                        				                       storage.setItem("selectedSection","map");
+                                                                window.location = "map_view.html";
+                                                 }
+                                                      });
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="person_category_map_icons">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/platforms/android/assets/www/person_category_map_icons.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="okhttp-3.0.0-RC1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/platforms/android/assets/www/plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/src/okhttp-3.0.0-RC1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../okhttp-3.0.0-RC1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
